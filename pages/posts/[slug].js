@@ -1,8 +1,5 @@
-export default function PostDetailPage() {
-    return (
-        <div>
-            <h1>Post Detail</h1>
-            <p>Post Detail</p>
-        </div>
-    );
+import PostContent from "../../components/posts/post-detail/post-content";
+
+export default function PostDetailPage(props) {
+    return <PostContent post={props.post} />;
 }
