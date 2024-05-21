@@ -22,8 +22,9 @@ export default async function handler(req, res) {
             message,
         };
 
+        let client;
         try {
-            const client = await MongoClient.connect(
+            client = await MongoClient.connect(
                 "mongodb+srv://akif:6w8qEvujS07THhr0@cluster0.8dqguc6.mongodb.net/my-blog?retryWrites=true&w=majority&appName=Cluster0"
             );
         } catch (error) {
